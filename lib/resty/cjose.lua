@@ -15,7 +15,7 @@ ffi.cdef [[
   void free(void *ptr);
 ]]
 
-local cjose = ffi.C 
+local cjose = ffi.load('cjose')
 
 
 function _M.getJWSInfo(document)
