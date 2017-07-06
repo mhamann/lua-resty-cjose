@@ -34,7 +34,7 @@ function _M.getJWSInfo(document)
     print ('error getting plain text for jws: ' .. ffi.string(err.message))
     return nil
   end
-  return ffi.string(ffi.cast("char**", text)[0])
+  return ffi.string(ffi.cast("char**", text)[0], ffi.cast('int*', size)[0])
 end
 
 function _M.validateJWS(document, key)
