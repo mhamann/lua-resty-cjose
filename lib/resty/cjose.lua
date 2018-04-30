@@ -43,7 +43,7 @@ function _M.validateJWS(document, key)
   local err = ffi.new('cjose_err') 
   local c_key = cjose.cjose_jwk_import(c_strkey, #key, err)
   if err.code > 0 then
-    print('error loading key: ' .. ffi.string(err.message))
+    print('error loading key: ' .. err)
     return nil
   end
   local c_strsig = ffi.new('char[?]', #document)
