@@ -1,5 +1,5 @@
 package = "lua-resty-cjose"
-version = "0.5"
+version = "0.5-0"
 source = {
    url = "git://github.com/mhamann/lua-resty-cjose",
    tag = "v0.5"
